@@ -1,0 +1,100 @@
+﻿@using MiDepa.pe.Helper
+
+<nav class="navbar navbar-default navbar-static-top m-b-0">
+    <div class="navbar-header">
+        <div class="top-left-part">
+            <!-- Logo -->
+            <a class="logo" href="@Url.Action("Index","Home")">
+                <!-- Logo icon image, you can use font-icon also --><b>
+                    <!--This is dark logo icon--><img src="~/wwwroot/plugins/images/admin-logo.png" alt="home" class="dark-logo"><!--This is light logo icon--><img src="~/wwwroot/plugins/images/admin-logo-dark.png" alt="home" class="light-logo">
+                </b>
+                <!-- Logo text image you can use text also --><span class="hidden-xs">
+                    <!--This is dark logo text--><img src="~/wwwroot/plugins/images/admin-text.png" alt="home" class="dark-logo"><!--This is light logo text--><img src="~/wwwroot/plugins/images/admin-text-dark.png" alt="home" class="light-logo">
+                </span>
+            </a>
+        </div>
+        <!-- /Logo -->
+        <!-- Search input and Toggle icon -->
+        <ul class="nav navbar-top-links navbar-left">
+            @if (HelperFunciones.ValidaTienePermiso(HelperConstantes.Permisos.ACCESODIRECTO_NOTIFICACIONES))
+            {
+                <li class="dropdown">
+                    <a id="lnk_not" class="dropdown-toggle waves-effect waves-light" href="#">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </li>
+            }
+
+            @if (HelperFunciones.ValidaTienePermiso(HelperConstantes.Permisos.ACCESODIRECTO_CALENDARIO))
+            {
+                <li class="dropdown">
+                    <a id="lnk_eve" class="dropdown-toggle waves-effect waves-light" href="#">
+                        <i class="mdi mdi-calendar"></i>
+                    </a>
+                </li>
+            }
+
+            @if (HelperFunciones.ValidaTienePermiso(HelperConstantes.Permisos.ACCESODIRECTO_PAQUETES))
+            {
+                <li class="dropdown">
+                    <a id="lnk_paq" class="dropdown-toggle waves-effect waves-light" href="#">
+                        <i class="mdi mdi-cube-send"></i>
+                    </a>
+                </li>
+            }
+
+            @if (HelperFunciones.ValidaTienePermiso(HelperConstantes.Permisos.ACCESODIRECTO_APROBACIONPAGOS))
+            {
+                <li class="dropdown">
+                    <a id="lnk_pag" class="dropdown-toggle waves-effect waves-light" href="@Url.Action("Index","Pago")">
+                        <i class="mdi mdi-cash-usd"></i>
+                    </a>
+                </li>
+            }
+
+        </ul>
+        <ul class="nav navbar-top-links navbar-right pull-right">
+            <li class="boton_cam">
+                CAMPAÑA <br>
+                <span>
+                    @SesionModel.DatosSesion.Usuario.CampaniaActual
+                </span>
+
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#">
+                    <img src="@HelperFunciones.FotoUsuario()" alt="user-img" width="36" class="img-circle img-usu">
+                    <b class="hidden-xs">@HelperFunciones.NombreUsuario()</b><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated flipInY">
+                    <li>
+                        <div class="dw-user-box">
+                            <div class="u-img">
+                                <img src="@HelperFunciones.FotoUsuario()" alt="user" class="img-usu">
+                            </div>
+                            <div class="u-text">
+                                <h4>@HelperFunciones.NombreUsuario()</h4>
+                                <h6 class="text-muted">@HelperFunciones.CorreoUsuario()</h6><a href="javascript:void(0)" onclick="usuario.editorPerfil.init()" class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="javascript:void(0)" onclick="usuario.editorClave.init()"><i class="ti-settings"></i> Cambiar Contraseña</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="@Url.Action("Logout","Autenticacion")"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+    </div>
+    <!-- /.navbar-header -->
+    <!-- /.navbar-top-links -->
+    <!-- /.navbar-static-side -->
+</nav>
+
+<script>
+    $(document).ready(function () {
+        home.layoutHead.load();
+    });
+</script>

@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Perú Depa";
+}
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h4 class="page-title">Deuda Actual S/.0.00</h4>
+    </div>
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+        <ol class="breadcrumb">
+            <li class="active">Inicio</li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box text-center" style="min-height: 185px;">
+            <h3 id="pri_txt1" class="box-title" style="margin-bottom: 0px;margin-bottom: 0px;"></h3>
+            <div a class="row" style="height: 100px;">
+                <div style="height: 100px;">
+                    <span id="pri_img1" style="font-size:70px" class=""></span>
+                </div>
+                <div>
+                    <a href="@Url.Action("Index","EstadoCuenta")" style="font-size:9px;">Ver detalle y pagos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="white-box text-center" style="min-height: 185px;">
+            <h3 class="box-title" style="margin-bottom: 0px;margin-bottom: 0px;">Historial de meses</h3>
+            <div id="div_historial" class="stats-row">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box text-center" style="min-height: 185px;">
+            <h3 id="pri_txt1" class="box-title" style="margin-bottom: 0px;margin-bottom: 0px;">Evolución de gastos</h3>
+            <div class="row">
+                <div id="ct-extra" style="height: 62px"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="white-box text-center" id="dep_est">
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        home.dashboard1.load();
+    });
+</script>

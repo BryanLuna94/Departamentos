@@ -1,0 +1,33 @@
+﻿@using System.Collections.Generic;
+@using MiDepa.pe.ServicioMiDepa;
+@using System.Web.Mvc;
+@using MiDepa.pe.Helper;
+
+@helper GetMenu(List<OpcionListaDto> opciones, int idPadre, List<OpcionListaDto> opcionesGeneral)
+    {
+        var data = opciones.Where(x => x.CodigoPadre == idPadre).ToList();
+        var host = (Request.ApplicationPath == "/") ? "" : Request.ApplicationPath;
+        foreach (var i in data)
+        {
+            var urlGenerada = string.Format("{0}/{1}", host, i.Ruta);
+            var submenu = HelperFunciones.ListaOpcionesPorPadre_Menu(opcionesGeneral, i.Codigo);
+            if (submenu.Count > 0)
+            {
+                <li class="li-menu">
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i data-icon="" class="@i.Clase"></i>
+                        <span class="hide-menu">&nbsp; @i.Nombre</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        @MenuPrincipal.GetMenu(submenu, i.Codigo, opcionesGeneral)
+                    </ul>
+                </li>
+
+            }
+            else
+            {
+                <li><a class="url-menu" href="@urlGenerada"><i data-icon='' class='@i.Clase'></i> <span class='hide-menu'></span> @i.Nombre</a></li>
+            }
+        }
+}

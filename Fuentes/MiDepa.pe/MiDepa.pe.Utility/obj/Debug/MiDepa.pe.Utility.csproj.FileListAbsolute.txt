@@ -1,0 +1,5 @@
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.Utility\bin\Debug\MiDepa.pe.Utility.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.Utility\bin\Debug\MiDepa.pe.Utility.pdb
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.Utility\obj\Debug\MiDepa.pe.Utility.csproj.CoreCompileInputs.cache
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.Utility\obj\Debug\MiDepa.pe.Utility.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.Utility\obj\Debug\MiDepa.pe.Utility.pdb

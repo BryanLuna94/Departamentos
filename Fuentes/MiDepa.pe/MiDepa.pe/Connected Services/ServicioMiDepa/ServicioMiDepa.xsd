@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" />
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q1:LoginRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="LoginResult" nillable="true" type="q2:LoginResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDatosEstaticos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuarioId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDatosEstaticosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListarDatosEstaticosResult" nillable="true" type="q3:DatosEstaticosResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaDatosHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="depaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaDatosHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListaDatosHomeResult" nillable="true" type="q4:HomeResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIndexEstadoCuenta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIndexEstadoCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ObtenerIndexEstadoCuentaResult" nillable="true" type="q5:EstadoCuentaResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDatosEstadoCuentaPorCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="depaId" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoCampania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDatosEstadoCuentaPorCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListarDatosEstadoCuentaPorCampaniaResult" nillable="true" type="q6:EstadoCuentaResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEditorPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="edificioId" type="xs:int" />
+        <xs:element minOccurs="0" name="pagoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEditorPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ObtenerEditorPagoResult" nillable="true" type="q7:PagoResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q8:PagoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarPagoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q9:PagoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPagoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarPagoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AprobarPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q10:PagoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AprobarPagoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechazarPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q11:PagoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechazarPagoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarPagos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q12:PagoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarPagosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListarPagosResult" nillable="true" type="q13:PagoResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListadoArchivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListadoArchivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListadoArchivosResult" nillable="true" type="q14:ArchivoResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArchivoPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArchivoPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ObtenerArchivoPorIdResult" nillable="true" type="q15:ArchivoResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarArchivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q16:ArchivoRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarArchivoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarArchivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarArchivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarArchivoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOpcionesPorPerfil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPerfil" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOpcionesPorPerfilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListaOpcionesPorPerfilResult" nillable="true" type="q17:PerfilResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOpcionesPorPerfil_Menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPerfil" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOpcionesPorPerfil_MenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListaOpcionesPorPerfil_MenuResult" nillable="true" type="q18:PerfilResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCampanias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q19:CampaniaRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCampaniasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ListarCampaniasResult" nillable="true" type="q20:CampaniaResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEditorCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="edificioId" type="xs:int" />
+        <xs:element minOccurs="0" name="campaniaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEditorCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" minOccurs="0" name="ObtenerEditorCampaniaResult" nillable="true" type="q21:CampaniaResponseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q22:CampaniaRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" minOccurs="0" name="request" nillable="true" type="q23:CampaniaRequestDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,41 @@
+﻿/*fondos oscuros*/
+/*bordes oscuros*/
+/*fondos claros*/
+/*letras para fondos oscuros*/
+/*letras para fondos claros*/
+/*sidebar*/
+/*tabla*/
+/*dialog*/
+form#loginForm {
+  background-color: #fbfbfb;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 1px #ececec;
+}
+form#loginForm header {
+  background: rgba(248, 248, 248, 0.9) none repeat scroll 0 0;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  margin: 0;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+form#loginForm header button#btnLlave {
+  margin-top: -7px !important;
+}
+form#loginForm .box-body {
+  background-color: white !important;
+}
+form#loginForm .box-body .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+form#loginForm .box-body .form-group .control-label {
+  margin-bottom: 5px !important;
+}
+form#loginForm .box-body .form-group .form-control {
+  height: 35px !important;
+}
+form#loginForm .box-body .form-group .form-control-feedback {
+  right: 32px !important;
+  top: 32px !important;
+}

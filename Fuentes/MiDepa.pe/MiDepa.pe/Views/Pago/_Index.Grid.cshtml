@@ -1,0 +1,39 @@
+﻿@using MiDepa.pe.Helper
+@model MiDepa.pe.Models.Pagos.PagoGridViewModel
+
+<div class="panel-wrapper collapse in" id="pago-wrapper">
+    <div class="panel-body table-responsive">
+        <table class="table color-table inverse-table table-striped" id="tblLista">
+            <thead>
+                <tr class="row-head">
+                    <th width="20%">CAMPAÑA</th>
+                    <th width="20%">FECHA/HORA PAGO</th>
+                    <th width="15%">MONTO</th>
+                    <th width="15%">DEPA</th>
+                    <th width="15%">ESTADO</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbodylst">
+                @foreach (var item in Model.ListaPagos)
+                {
+                <tr role="row">
+                    <td align="center">
+                        <a href="#" onclick="pago.aprobacion.init(@item.PagoId)">@item.Campania</a>
+                    </td>
+                    <td align="center">@item.FechaHoraPago</td>
+                    <td align="right">@item.Monto</td>
+                    <td align="center">@item.Depa</td>
+                    <td align="center">@item.Estado</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        pago.grid.paginarParcial();
+    });
+</script>

@@ -1,0 +1,15 @@
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.BusinessLayer.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.BusinessLayer.pdb
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\JBLV.Log.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\log4net.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.DataAccess.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.DataTypes.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.Utility.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\JBLV.BaseDatos.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.DataAccess.pdb
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\bin\Debug\MiDepa.pe.DataTypes.pdb
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\obj\Debug\MiDepa.pe.BusinessLayer.csprojAssemblyReference.cache
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\obj\Debug\MiDepa.pe.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\obj\Debug\MiDepa.pe.BusinessLayer.csproj.CopyComplete
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\obj\Debug\MiDepa.pe.BusinessLayer.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.BusinessLayer\obj\Debug\MiDepa.pe.BusinessLayer.pdb

@@ -1,0 +1,99 @@
+﻿@using MiDepa.pe.Helper
+@model MiDepa.pe.Models.Pagos.PagoGridViewModel
+
+<div class="panel-heading">
+    <div class="row">
+        <div class="col-lg-2 col-sm-4 col-xs-2">
+            <button type="button" class="btn btn-block btn-outline btn-default btn-exportar waves-effect waves-light">
+                <span class="visible-lg visible-md"><i class="fa fa-file-excel-o m-r-5 fa-1.5x"></i>Exportar</span>
+                <span class="visible-xs visible-sm"><i class="fa fa-file-excel-o m-r-5 fa-1.5x"></i></span>
+            </button>
+        </div>
+
+        <div class="col-lg-2 col-sm-4 col-xs-2 pull-right">
+            <div class="panel-action">
+                <a href="#" data-perform="panel-collapse">
+                    <i class="ti-plus"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="panel-wrapper collapse" aria-expanded="false">
+    <div class="panel-body">
+        @Html.Hidden("hdnURLExportar", Url.Action("Exportar", "Pago", null))
+        <div class="form-group">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Campaña</label>
+                    <div class="col-md-12">
+                        @Html.DropDownListFor(model => model.Filtro.CodigoCampania, Model.LstCampanias, "--Seleccione--", new { @class = "form-control form-control-line" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Nro. Depa</label>
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.Filtro.Depa, new { @class = "form-control form-control-line", @placeholder = "Buscar por departamento...", @maxlength = "20" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Fecha Inicio</label>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.Filtro.FechaPagoIni, new { @class = "form-control pull-right  form-control-line" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Fecha Fin</label>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.Filtro.FechaPagoFin, new { @class = "form-control pull-right  form-control-line" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Nro. Voucher</label>
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.Filtro.NroVoucher, new { @class = "form-control form-control-line", @placeholder = "Buscar por voucher...", @maxlength = "20" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-12">Estado</label>
+                    <div class="col-md-12">
+                        @Html.DropDownListFor(model => model.Filtro.EstadoId, Model.LstEstados, new { @class = "form-control form-control-line" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-outline btn-default btn-search  waves-effect waves-light">
+                    <span class="visible-lg visible-md"><i class="fa fa-search m-r-5 fa-1.5x"></i>Buscar</span>
+                    <span class="visible-xs visible-sm"><i class="fa fa-search m-r-5 fa-1.5x"></i></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArchivoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitud" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArchivoListaDto" nillable="true" type="tns:ArchivoListaDto" />
+  <xs:complexType name="ArrayOfOpcionListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpcionListaDto" nillable="true" type="tns:OpcionListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpcionListaDto" nillable="true" type="tns:ArrayOfOpcionListaDto" />
+  <xs:complexType name="OpcionListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoPadre" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" type="xs:short" />
+      <xs:element minOccurs="0" name="Ruta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoOpcion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpcionListaDto" nillable="true" type="tns:OpcionListaDto" />
+  <xs:complexType name="DatosUsuarioListaDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:LoginListaDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CampaniaActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Depa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepaId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Edificio" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DatosUsuarioListaDto" nillable="true" type="tns:DatosUsuarioListaDto" />
+  <xs:complexType name="LoginListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:short" />
+      <xs:element minOccurs="0" name="CodigoEdificio" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoPerfil" type="xs:short" />
+      <xs:element minOccurs="0" name="CodigoPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginListaDto" nillable="true" type="tns:LoginListaDto" />
+  <xs:complexType name="ArrayOfGenericoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GenericoListaDto" nillable="true" type="tns:GenericoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGenericoListaDto" nillable="true" type="tns:ArrayOfGenericoListaDto" />
+  <xs:complexType name="GenericoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenericoListaDto" nillable="true" type="tns:GenericoListaDto" />
+  <xs:complexType name="ArrayOfDepasEstadoHomeListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DepasEstadoHomeListaDto" nillable="true" type="tns:DepasEstadoHomeListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepasEstadoHomeListaDto" nillable="true" type="tns:ArrayOfDepasEstadoHomeListaDto" />
+  <xs:complexType name="DepasEstadoHomeListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoDepa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Debe" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DepaId" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Saldo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepasEstadoHomeListaDto" nillable="true" type="tns:DepasEstadoHomeListaDto" />
+  <xs:complexType name="ArrayOfReporteGastosMensualEdificioResumido">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReporteGastosMensualEdificioResumido" nillable="true" type="tns:ReporteGastosMensualEdificioResumido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReporteGastosMensualEdificioResumido" nillable="true" type="tns:ArrayOfReporteGastosMensualEdificioResumido" />
+  <xs:complexType name="ReporteGastosMensualEdificioResumido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:short" />
+      <xs:element minOccurs="0" name="Campania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteGastosMensualEdificioResumido" nillable="true" type="tns:ReporteGastosMensualEdificioResumido" />
+  <xs:complexType name="ArrayOfReporteEstadoCuentaMensualResumidoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReporteEstadoCuentaMensualResumidoListaDto" nillable="true" type="tns:ReporteEstadoCuentaMensualResumidoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReporteEstadoCuentaMensualResumidoListaDto" nillable="true" type="tns:ArrayOfReporteEstadoCuentaMensualResumidoListaDto" />
+  <xs:complexType name="ReporteEstadoCuentaMensualResumidoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlDia" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Anio" type="xs:int" />
+      <xs:element minOccurs="0" name="Campania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MesId" type="xs:int" />
+      <xs:element minOccurs="0" name="Saldo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteEstadoCuentaMensualResumidoListaDto" nillable="true" type="tns:ReporteEstadoCuentaMensualResumidoListaDto" />
+  <xs:complexType name="ArrayOfDetalleEstadoCuentaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleEstadoCuentaListaDto" nillable="true" type="tns:DetalleEstadoCuentaListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleEstadoCuentaListaDto" nillable="true" type="tns:ArrayOfDetalleEstadoCuentaListaDto" />
+  <xs:complexType name="DetalleEstadoCuentaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoCuentaDetalleId" type="xs:int" />
+      <xs:element minOccurs="0" name="MontoPagar" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleEstadoCuentaListaDto" nillable="true" type="tns:DetalleEstadoCuentaListaDto" />
+  <xs:complexType name="ArrayOfPagosPorEstadoCuentaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PagosPorEstadoCuentaListaDto" nillable="true" type="tns:PagosPorEstadoCuentaListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPagosPorEstadoCuentaListaDto" nillable="true" type="tns:ArrayOfPagosPorEstadoCuentaListaDto" />
+  <xs:complexType name="PagosPorEstadoCuentaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstadoId" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PagoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagosPorEstadoCuentaListaDto" nillable="true" type="tns:PagosPorEstadoCuentaListaDto" />
+  <xs:complexType name="MontosEstadoCuentaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstadoCuentaId" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MontoPagado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoPagar" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Saldo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalInteres" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MontosEstadoCuentaListaDto" nillable="true" type="tns:MontosEstadoCuentaListaDto" />
+  <xs:complexType name="ArrayOfPagoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PagoListaDto" nillable="true" type="tns:PagoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPagoListaDto" nillable="true" type="tns:ArrayOfPagoListaDto" />
+  <xs:complexType name="PagoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:int" />
+      <xs:element minOccurs="0" name="Campania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Depa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoCuentaId" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoId" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaHoraPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MesId" type="xs:int" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PagoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagoListaDto" nillable="true" type="tns:PagoListaDto" />
+  <xs:complexType name="ArrayOfArchivoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArchivoListaDto" nillable="true" type="tns:ArchivoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArchivoListaDto" nillable="true" type="tns:ArrayOfArchivoListaDto" />
+  <xs:complexType name="ArrayOfOpcionesPorPerfilListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpcionesPorPerfilListaDto" nillable="true" type="tns:OpcionesPorPerfilListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpcionesPorPerfilListaDto" nillable="true" type="tns:ArrayOfOpcionesPorPerfilListaDto" />
+  <xs:complexType name="OpcionesPorPerfilListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoOpcion" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoPadre" type="xs:int" />
+      <xs:element minOccurs="0" name="Existe" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpcionesPorPerfilListaDto" nillable="true" type="tns:OpcionesPorPerfilListaDto" />
+  <xs:complexType name="ArrayOfPerfilListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerfilListaDto" nillable="true" type="tns:PerfilListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfilListaDto" nillable="true" type="tns:ArrayOfPerfilListaDto" />
+  <xs:complexType name="PerfilListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:short" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfilListaDto" nillable="true" type="tns:PerfilListaDto" />
+  <xs:complexType name="ArrayOfConceptoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConceptoListaDto" nillable="true" type="tns:ConceptoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConceptoListaDto" nillable="true" type="tns:ArrayOfConceptoListaDto" />
+  <xs:complexType name="ConceptoListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConceptoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Existe" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreConcepto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConceptoListaDto" nillable="true" type="tns:ConceptoListaDto" />
+  <xs:complexType name="ArrayOfCampaniaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampaniaListaDto" nillable="true" type="tns:CampaniaListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampaniaListaDto" nillable="true" type="tns:ArrayOfCampaniaListaDto" />
+  <xs:complexType name="CampaniaListaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:int" />
+      <xs:element minOccurs="0" name="CampaniaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoId" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MesId" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaniaListaDto" nillable="true" type="tns:CampaniaListaDto" />
+</xs:schema>

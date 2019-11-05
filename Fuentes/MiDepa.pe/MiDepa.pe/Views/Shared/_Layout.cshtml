@@ -1,0 +1,206 @@
+﻿@using MiDepa.pe.Helper
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/wwwroot/plugins/images/favicon.png">
+    <title>Jelaf - @ViewData["Title"]</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/wwwroot/ampleadmin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- This is Sidebar menu CSS -->
+    <link href="~/wwwroot/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- Editable CSS -->
+    <link href="~/wwwroot/plugins/bower_components/jquery-datatables-editable/datatables.css" rel="stylesheet">
+    <!-- This is a Animation CSS -->
+    <link href="~/wwwroot/ampleadmin/css/animate.css" rel="stylesheet">
+    <!-- This is a Custom CSS -->
+    <link href="~/wwwroot/ampleadmin/css/style.css" rel="stylesheet">
+    <link href="~/wwwroot/plugins/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" />
+    <!-- color CSS you can use different color css from css/colors folder -->
+    @*<link href="~/wwwroot/ampleadmin/css/colors/blue-dark.css" id="theme" rel="stylesheet">*@
+    <link href="~/wwwroot/ampleadmin/css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="~/wwwroot/lib/css/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet" />
+    <link href="~/wwwroot/css/site.base.css" rel="stylesheet" />
+    <link href="~/wwwroot/css/general.css" rel="stylesheet" />
+    <link href="~/wwwroot/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="~/wwwroot/plugins/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="~/wwwroot/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="~/wwwroot/plugins/bower_components/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+    <link href="~/wwwroot/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker.standalone.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/daterangepicker-bs3.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/dataTables.bootstrap.min.css" />
+    <link href="~/wwwroot/plugins/bower_components/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="~/wwwroot/plugins/bower_components/ion-rangeslider/css/ion.rangeSlider.skinModern.css" rel="stylesheet" />
+
+    <link href="~/wwwroot/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="~/wwwroot/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="~/wwwroot/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!--Gauge chart CSS -->
+    <link href="~/wwwroot/plugins/bower_components/Minimal-Gauge-chart/css/cmGauge.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="~/wwwroot/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/wwwroot/ampleadmin/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="~/wwwroot/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="~/wwwroot/ampleadmin/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="~/wwwroot/ampleadmin/js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/wwwroot/ampleadmin/js/custom.min.js"></script>
+    <!--Style Switcher -->
+    <script src="~/wwwroot/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/raphael/raphael-min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/morrisjs/morris.js"></script>
+    <!-- Flot Charts JavaScript -->
+    <script src="~/wwwroot/plugins/bower_components/flot/jquery.flot.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    @*<script src="~/wwwroot/js/plugins/app.js"></script>*@
+
+    <script src="~/wwwroot/lib/js/jquery-ui.min.js"></script>
+    <script src="~/wwwroot/lib/js/jquery.geocomplete.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-dialog.min.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-filestyle.min.js"></script>
+    <script src="~/wwwroot/lib/js/formValidation.js"></script>
+    <script src="~/wwwroot/lib/js/Framework.bootstrap.js"></script>
+    <script src="~/wwwroot/lib/js/i18n.js"></script>
+    <script src="~/wwwroot/lib/js/mandatoryIcon.js"></script>
+    <script src="~/wwwroot/lib/js/es_ES.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-datepicker.es.min.js"></script>
+    <script src="~/wwwroot/lib/js/daterangepicker.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-timepicker.min.js"></script>
+    <script src="~/wwwroot/lib/js/jquery-ui.autocomplete.match.js"></script>
+    <script src="~/wwwroot/lib/js/jquery-sortable.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/moment/moment.js"></script>
+    <script src="~/wwwroot/ampleadmin/js/toastr.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/sweetalert/jquery.sweet-alert.custom.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/custom-select/custom-select.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+
+    <script src="~/wwwroot/js/plugins/noty.jquery.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.themes.default.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.mensaje.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.bottom.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.bottomCenter.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.center.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.inline.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.top.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.topCenter.js"></script>
+    <script src="~/wwwroot/js/plugins/input-mask/jquery.inputmask.bundle.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/ion-rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/ion-rangeslider/js/ion-rangeSlider/ion.rangeSlider-init.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="~/wwwroot/plugins/bower_components/Chart.js/Chart.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/Chart.js/Chart2.min.js"></script>
+
+    <!-- Chart List-->
+    <script src="~/wwwroot/plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="~/wwwroot/plugins/bower_components/Minimal-Gauge-chart/js/cmGauge.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/Minimal-Gauge-chart/gauge.min.js"></script>
+    <script src="~/wwwroot/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
+
+    <script src="~/wwwroot/js/helper/baseEditor.js"></script>
+    <script src="~/wwwroot/js/helper/baseGrid.js"></script>
+    <script src="~/wwwroot/js/helper/helperAjax.js"></script>
+    <script src="~/wwwroot/js/helper/helperConstantes.js"></script>
+    <script src="~/wwwroot/js/helper/helperFunctions.js"></script>
+    <script src="~/wwwroot/js/helper/helperGrid.js"></script>
+    <script src="~/wwwroot/js/helper/helperNotificacion.js"></script>
+    <script src="~/wwwroot/js/helper/helperSite.js"></script>
+
+    <script src="~/wwwroot/js/view/home.js"></script>
+    <script src="~/wwwroot/js/view/estadocuenta.js"></script>
+    <script src="~/wwwroot/js/view/general.js"></script>
+    <script src="~/wwwroot/js/view/pago.js"></script>
+    <script src="~/wwwroot/js/view/campania.js"></script>
+</head>
+<body class="fix-header content-wrapper">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div id="id-layout-processing">
+        <img src="~/wwwroot/Images/processing.gif" />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        @Html.Partial("_LayoutMain.Head")
+        @Html.Partial("_LayoutMain.Lateral")
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                @RenderBody()
+
+                @{
+                    var datosSesion = SesionModel.DatosSesion;
+                }
+                
+            </div>
+        </div>
+        @Html.Partial("_LayoutMain.Footer")
+        <div class="control-sidebar-bg"></div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            home.layout.ready();
+        });
+        $(window).load(function () {
+            home.layout.load();
+        });
+    </script>
+
+</body>
+</html>

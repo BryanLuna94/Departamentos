@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" />
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Filtros" />
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" />
+  <xs:complexType name="LoginRequestDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginRequestDto" nillable="true" type="tns:LoginRequestDto" />
+  <xs:complexType name="PagoRequestDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Adjunto1" nillable="true" type="q1:Archivo" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Adjunto2" nillable="true" type="q2:Archivo" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Adjunto3" nillable="true" type="q3:Archivo" />
+      <xs:element minOccurs="0" name="CodigoUsuario" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Filtros" minOccurs="0" name="Filtro" nillable="true" type="q4:PagoFiltroDto" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Pago" nillable="true" type="q5:Pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagoRequestDto" nillable="true" type="tns:PagoRequestDto" />
+  <xs:complexType name="ArchivoRequestDto">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Archivo" nillable="true" type="q6:Archivo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArchivoRequestDto" nillable="true" type="tns:ArchivoRequestDto" />
+  <xs:complexType name="CampaniaRequestDto">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Campania" nillable="true" type="q7:Campania" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Filtros" minOccurs="0" name="Filtro" nillable="true" type="q8:CampaniaFiltroDto" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaConceptos" nillable="true" type="q9:ArrayOfConceptoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaniaRequestDto" nillable="true" type="tns:CampaniaRequestDto" />
+</xs:schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="39c78a8f-c997-4c2a-a2c7-7debd7f3e53e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64508/ServicioMiDepa.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioMiDepa2.xsd" MetadataType="Schema" ID="f6bc3c5a-1634-40ad-bc8b-0f969ffddf2a" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioMiDepa6.xsd" MetadataType="Schema" ID="4433c2fe-f0de-40bf-a7d5-c544a7b7185e" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd6" />
+    <MetadataFile FileName="ServicioMiDepa5.xsd" MetadataType="Schema" ID="82a910e5-36f0-47c2-99ed-f921fcb62c80" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd5" />
+    <MetadataFile FileName="ServicioMiDepa1.xsd" MetadataType="Schema" ID="6d9d41f4-74bd-4d31-a417-0fc82a7774eb" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd4" />
+    <MetadataFile FileName="ServicioMiDepa.xsd" MetadataType="Schema" ID="ff6cbfcc-9a68-4f1d-8cf1-d40e71ee4384" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioMiDepa3.xsd" MetadataType="Schema" ID="a172095f-7cfd-484e-97d3-da368ad434dc" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioMiDepa4.xsd" MetadataType="Schema" ID="b74ae2b1-efd0-49a4-91f8-8b78fa3d4dd9" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioMiDepa.wsdl" MetadataType="Wsdl" ID="e58e9716-744b-40b2-8f69-d48cc57dc7fb" SourceId="1" SourceUrl="http://localhost:64508/ServicioMiDepa.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

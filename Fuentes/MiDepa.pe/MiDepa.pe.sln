@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe.DataAccess", "MiDepa.pe.DataAccess\MiDepa.pe.DataAccess.csproj", "{ECE7E812-EA3C-4409-9906-38C61F77F3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe.DataTypes", "MiDepa.pe.DataTypes\MiDepa.pe.DataTypes.csproj", "{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe.Utility", "MiDepa.pe.Utility\MiDepa.pe.Utility.csproj", "{06C7ACF5-6FC8-431D-8A18-480C2A8EB8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe.BusinessLayer", "MiDepa.pe.BusinessLayer\MiDepa.pe.BusinessLayer.csproj", "{62F9C57D-7B1E-4CAF-BC24-5BB540DC793E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe.Servicio", "MiDepa.pe.Servicio\MiDepa.pe.Servicio.csproj", "{D4076E62-943F-4AA9-9AB7-6A340073151B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiDepa.pe", "MiDepa.pe\MiDepa.pe.csproj", "{30BD1DA7-1464-45FE-A970-09F217A1CA67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4076E62-943F-4AA9-9AB7-6A340073151B} = {D4076E62-943F-4AA9-9AB7-6A340073151B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECE7E812-EA3C-4409-9906-38C61F77F3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE7E812-EA3C-4409-9906-38C61F77F3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE7E812-EA3C-4409-9906-38C61F77F3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE7E812-EA3C-4409-9906-38C61F77F3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C7ACF5-6FC8-431D-8A18-480C2A8EB8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C7ACF5-6FC8-431D-8A18-480C2A8EB8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C7ACF5-6FC8-431D-8A18-480C2A8EB8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C7ACF5-6FC8-431D-8A18-480C2A8EB8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F9C57D-7B1E-4CAF-BC24-5BB540DC793E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F9C57D-7B1E-4CAF-BC24-5BB540DC793E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F9C57D-7B1E-4CAF-BC24-5BB540DC793E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F9C57D-7B1E-4CAF-BC24-5BB540DC793E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4076E62-943F-4AA9-9AB7-6A340073151B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4076E62-943F-4AA9-9AB7-6A340073151B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4076E62-943F-4AA9-9AB7-6A340073151B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4076E62-943F-4AA9-9AB7-6A340073151B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BD1DA7-1464-45FE-A970-09F217A1CA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BD1DA7-1464-45FE-A970-09F217A1CA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BD1DA7-1464-45FE-A970-09F217A1CA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BD1DA7-1464-45FE-A970-09F217A1CA67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7972C833-06C6-41E9-8ACD-021C982972B0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bryanlunavasquez.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MiDepa.pe.DataAccess\\MiDepa.pe.DataAccess.csproj
+		SccProjectName1 = MiDepa.pe.DataAccess
+		SccLocalPath1 = MiDepa.pe.DataAccess
+		SccProjectUniqueName2 = MiDepa.pe.DataTypes\\MiDepa.pe.DataTypes.csproj
+		SccProjectName2 = MiDepa.pe.DataTypes
+		SccLocalPath2 = MiDepa.pe.DataTypes
+		SccProjectUniqueName3 = MiDepa.pe.Utility\\MiDepa.pe.Utility.csproj
+		SccProjectName3 = MiDepa.pe.Utility
+		SccLocalPath3 = MiDepa.pe.Utility
+		SccProjectUniqueName4 = MiDepa.pe.BusinessLayer\\MiDepa.pe.BusinessLayer.csproj
+		SccProjectName4 = MiDepa.pe.BusinessLayer
+		SccLocalPath4 = MiDepa.pe.BusinessLayer
+		SccProjectUniqueName5 = MiDepa.pe.Servicio\\MiDepa.pe.Servicio.csproj
+		SccProjectName5 = MiDepa.pe.Servicio
+		SccLocalPath5 = MiDepa.pe.Servicio
+		SccProjectUniqueName6 = MiDepa.pe\\MiDepa.pe.csproj
+		SccProjectName6 = MiDepa.pe
+		SccLocalPath6 = MiDepa.pe
+	EndGlobalSection
+EndGlobal

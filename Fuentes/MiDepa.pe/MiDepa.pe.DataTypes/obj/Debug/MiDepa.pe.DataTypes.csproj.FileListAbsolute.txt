@@ -1,0 +1,5 @@
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.DataTypes\bin\Debug\MiDepa.pe.DataTypes.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.DataTypes\bin\Debug\MiDepa.pe.DataTypes.pdb
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.DataTypes\obj\Debug\MiDepa.pe.DataTypes.csproj.CoreCompileInputs.cache
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.DataTypes\obj\Debug\MiDepa.pe.DataTypes.dll
+C:\Archivos\Proyectos\Departamentos\Fuentes\MiDepa.pe\MiDepa.pe.DataTypes\obj\Debug\MiDepa.pe.DataTypes.pdb

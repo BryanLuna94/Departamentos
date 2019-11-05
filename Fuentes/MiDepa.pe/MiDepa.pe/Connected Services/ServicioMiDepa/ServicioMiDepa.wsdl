@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioMiDepa" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Request" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" />
+      <xsd:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Filtros" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioMiDepa_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_Login_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q1:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstaticos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDatosEstaticos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstaticos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDatosEstaticosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstaticos_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q2:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaDatosHome_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDatosHome" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaDatosHome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDatosHomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaDatosHome_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q3:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerIndexEstadoCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIndexEstadoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerIndexEstadoCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIndexEstadoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerIndexEstadoCuenta_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q4:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDatosEstadoCuentaPorCampania" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDatosEstadoCuentaPorCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q5:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEditorPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEditorPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q6:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q7:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q8:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q9:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_AprobarPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_AprobarPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_AprobarPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q10:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_RechazarPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarPago" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_RechazarPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_RechazarPago_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q11:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarPagos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPagos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarPagos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPagosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarPagos_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q12:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListadoArchivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoArchivos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListadoArchivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoArchivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListadoArchivos_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q13:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerArchivoPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArchivoPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerArchivoPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArchivoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerArchivoPorId_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q14:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_GuardarArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_GuardarArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_GuardarArchivo_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q15:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_EliminarArchivo_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q16:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOpcionesPorPerfil" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOpcionesPorPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q17:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_Menu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOpcionesPorPerfil_Menu" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_Menu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOpcionesPorPerfil_MenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListaOpcionesPorPerfil_Menu_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q18:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarCampanias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCampanias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarCampanias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCampaniasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ListarCampanias_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q19:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEditorCampania" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEditorCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ObtenerEditorCampania_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q20:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCampania" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_InsertarCampania_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q21:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCampania" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioMiDepa_ActualizarCampania_ServiceErrorResponseTypeFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" name="detail" element="q22:ServiceErrorResponseType" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioMiDepa">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/Login" message="tns:IServicioMiDepa_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/LoginResponse" message="tns:IServicioMiDepa_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/LoginServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_Login_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDatosEstaticos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstaticos" message="tns:IServicioMiDepa_ListarDatosEstaticos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstaticosResponse" message="tns:IServicioMiDepa_ListarDatosEstaticos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstaticosServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListarDatosEstaticos_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDatosHome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaDatosHome" message="tns:IServicioMiDepa_ListaDatosHome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaDatosHomeResponse" message="tns:IServicioMiDepa_ListaDatosHome_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaDatosHomeServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListaDatosHome_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIndexEstadoCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerIndexEstadoCuenta" message="tns:IServicioMiDepa_ObtenerIndexEstadoCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerIndexEstadoCuentaResponse" message="tns:IServicioMiDepa_ObtenerIndexEstadoCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerIndexEstadoCuentaServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ObtenerIndexEstadoCuenta_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDatosEstadoCuentaPorCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstadoCuentaPorCampania" message="tns:IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstadoCuentaPorCampaniaResponse" message="tns:IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarDatosEstadoCuentaPorCampaniaServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListarDatosEstadoCuentaPorCampania_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEditorPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorPago" message="tns:IServicioMiDepa_ObtenerEditorPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorPagoResponse" message="tns:IServicioMiDepa_ObtenerEditorPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ObtenerEditorPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarPago" message="tns:IServicioMiDepa_InsertarPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarPagoResponse" message="tns:IServicioMiDepa_InsertarPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_InsertarPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarPago" message="tns:IServicioMiDepa_ActualizarPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarPagoResponse" message="tns:IServicioMiDepa_ActualizarPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ActualizarPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarPago" message="tns:IServicioMiDepa_EliminarPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarPagoResponse" message="tns:IServicioMiDepa_EliminarPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_EliminarPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AprobarPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/AprobarPago" message="tns:IServicioMiDepa_AprobarPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/AprobarPagoResponse" message="tns:IServicioMiDepa_AprobarPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/AprobarPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_AprobarPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/RechazarPago" message="tns:IServicioMiDepa_RechazarPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/RechazarPagoResponse" message="tns:IServicioMiDepa_RechazarPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/RechazarPagoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_RechazarPago_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPagos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarPagos" message="tns:IServicioMiDepa_ListarPagos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarPagosResponse" message="tns:IServicioMiDepa_ListarPagos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarPagosServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListarPagos_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoArchivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListadoArchivos" message="tns:IServicioMiDepa_ListadoArchivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListadoArchivosResponse" message="tns:IServicioMiDepa_ListadoArchivos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListadoArchivosServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListadoArchivos_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArchivoPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerArchivoPorId" message="tns:IServicioMiDepa_ObtenerArchivoPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerArchivoPorIdResponse" message="tns:IServicioMiDepa_ObtenerArchivoPorId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerArchivoPorIdServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ObtenerArchivoPorId_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/GuardarArchivo" message="tns:IServicioMiDepa_GuardarArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/GuardarArchivoResponse" message="tns:IServicioMiDepa_GuardarArchivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/GuardarArchivoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_GuardarArchivo_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarArchivo" message="tns:IServicioMiDepa_EliminarArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarArchivoResponse" message="tns:IServicioMiDepa_EliminarArchivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/EliminarArchivoServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_EliminarArchivo_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaOpcionesPorPerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfilResponse" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfilServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaOpcionesPorPerfil_Menu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil_Menu" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_Menu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil_MenuResponse" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_Menu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil_MenuServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListaOpcionesPorPerfil_Menu_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCampanias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarCampanias" message="tns:IServicioMiDepa_ListarCampanias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarCampaniasResponse" message="tns:IServicioMiDepa_ListarCampanias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ListarCampaniasServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ListarCampanias_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEditorCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorCampania" message="tns:IServicioMiDepa_ObtenerEditorCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorCampaniaResponse" message="tns:IServicioMiDepa_ObtenerEditorCampania_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ObtenerEditorCampaniaServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ObtenerEditorCampania_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarCampania" message="tns:IServicioMiDepa_InsertarCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarCampaniaResponse" message="tns:IServicioMiDepa_InsertarCampania_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/InsertarCampaniaServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_InsertarCampania_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarCampania" message="tns:IServicioMiDepa_ActualizarCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarCampaniaResponse" message="tns:IServicioMiDepa_ActualizarCampania_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicioMiDepa/ActualizarCampaniaServiceErrorResponseTypeFault" name="ServiceErrorResponseTypeFault" message="tns:IServicioMiDepa_ActualizarCampania_ServiceErrorResponseTypeFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioMiDepa" type="tns:IServicioMiDepa">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDatosEstaticos">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListarDatosEstaticos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDatosHome">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListaDatosHome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIndexEstadoCuenta">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ObtenerIndexEstadoCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDatosEstadoCuentaPorCampania">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListarDatosEstadoCuentaPorCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEditorPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ObtenerEditorPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/InsertarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ActualizarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/EliminarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AprobarPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/AprobarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarPago">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/RechazarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPagos">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListarPagos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoArchivos">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListadoArchivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArchivoPorId">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ObtenerArchivoPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarArchivo">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/GuardarArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivo">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/EliminarArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOpcionesPorPerfil">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOpcionesPorPerfil_Menu">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListaOpcionesPorPerfil_Menu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCampanias">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ListarCampanias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEditorCampania">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ObtenerEditorCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCampania">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/InsertarCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCampania">
+      <soap:operation soapAction="http://tempuri.org/IServicioMiDepa/ActualizarCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseTypeFault">
+        <soap:fault use="literal" name="ServiceErrorResponseTypeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioMiDepa">
+    <wsdl:port name="BasicHttpBinding_IServicioMiDepa" binding="tns:BasicHttpBinding_IServicioMiDepa">
+      <soap:address location="http://localhost:64508/ServicioMiDepa.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

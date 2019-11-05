@@ -1,0 +1,32 @@
+﻿@using MiDepa.pe.Helper
+
+@{
+    var datosSesion = SesionModel.DatosSesion;
+}
+
+
+<div class="navbar-default sidebar" role="navigation" style="overflow: visible;">
+    <div class="sidebar-nav slimscrollsidebar">
+        <div class="sidebar-head">
+            <h3>
+                <span class="fa-fw open-close">
+                    <i class="ti-menu hidden-xs"></i>
+                    <i class="ti-close visible-xs"></i>
+                </span>
+                <span class="hide-menu">Menú principal</span>
+            </h3>
+        </div>
+        <ul class="nav in" id="side-menu">
+
+            @if (datosSesion != null)
+            {
+                var usuarioActual = datosSesion.Usuario;
+                var modelo = datosSesion.PermisosUsuario.Where(x => x.TipoOpcion == 1).ToList();
+                if (modelo != null && modelo.Count() > 0)
+                {
+                    @MenuPrincipal.GetMenu(modelo, 1, modelo);
+                }
+            }
+        </ul>
+    </div>
+</div>

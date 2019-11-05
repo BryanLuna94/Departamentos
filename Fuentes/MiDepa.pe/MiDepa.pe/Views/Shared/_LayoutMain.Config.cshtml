@@ -1,0 +1,90 @@
+﻿@*<div class="right-sidebar">
+    <div class="slimscrollright">
+        <div class="rpanel-title"> Panel de configuración <span><i class="ti-close right-side-toggle"></i></span> </div>
+        <div class="r-panel-body">
+
+            @if (datosSesion != null)
+            {
+                var usuarioActual = datosSesion.Usuario;
+                var modelo = datosSesion.PermisosUsuario.Where(x => x.TipoOpcion == 1).ToList();
+                if (modelo != null && modelo.Count() > 0)
+                {
+                    var host = (Request.ApplicationPath == "/") ? "" : Request.ApplicationPath;
+                    var modificarInicioPrograma = datosSesion.PermisosUsuario.SingleOrDefault(x => x.Codigo == HelperConstantes.Permisos.PUEDE_MODIFICAR_DIAINICIOPROGRAMA);
+                    var modificarRetraso = datosSesion.PermisosUsuario.SingleOrDefault(x => x.Codigo == HelperConstantes.Permisos.PUEDE_MODIFICAR_RANGOSRETRASO);
+
+                    <form id="configEditorForm" class="form-horizontal">
+                        @if (modificarInicioPrograma != null)
+                        {
+                            <div class="form-group">
+                                <label class="col-md-12">Inicio</label>
+                                <div class="col-md-12">
+                                    <table class="table borderless">
+                                        <tr>
+                                            <td style="border: none;">Dia de inicio programa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" class="form-control input-sm" id="lytIniPro" value="@SesionModel.DatosSesion.DiaInicioPrograma" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        }
+
+                        @if (modificarRetraso != null)
+                        {
+                            <div class="form-group">
+                                <label class="col-md-12">Rango de retraso</label>
+
+                                <div class="col-md-12">
+                                    <table class="table borderless">
+                                        <tr>
+                                            <td colspan="1" style="border: none;"><span class="label label-success label-rouded">BAJO</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn1ini" value="@SesionModel.DatosSesion.RetrasoMes.MinimoNivel1" /></td>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn1fin" value="@SesionModel.DatosSesion.RetrasoMes.MaximoNivel1" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <table class="table borderless">
+                                        <tr>
+                                            <td colspan="1" style="border: none;"><span class="label label-warning label-rouded">MODERADO</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn2ini" value="@SesionModel.DatosSesion.RetrasoMes.MinimoNivel2" /></td>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn2fin" value="@SesionModel.DatosSesion.RetrasoMes.MaximoNivel2" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <table class="table borderless">
+                                        <tr>
+                                            <td colspan="1" style="border: none;"><span class="label label-danger label-rouded">ALTO</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn3ini" value="@SesionModel.DatosSesion.RetrasoMes.MinimoNivel3" /></td>
+                                            <td><input type="number" style="font-size: 11px;" class="form-control input-sm" id="lytn3fin" value="@SesionModel.DatosSesion.RetrasoMes.MaximoNivel3" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        }
+
+                        @if (modificarInicioPrograma != null || modificarRetraso != null)
+                        {
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" id="lytbtnGraba" class="btn btn-default"> <i class="fa fa-check"></i> Grabar</button>
+                                </div>
+                            </div>
+                        }
+                    </form>
+                }
+            }
+        </div>
+    </div>
+</div>*@

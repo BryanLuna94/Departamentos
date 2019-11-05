@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" />
+  <xs:import schemaLocation="http://localhost:64508/ServicioMiDepa.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" />
+  <xs:complexType name="LoginResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="FotoUsuario" nillable="true" type="q1:ArchivoListaDto" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaOpcionesPorPerfil" nillable="true" type="q2:ArrayOfOpcionListaDto" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="Usuario" nillable="true" type="q3:DatosUsuarioListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginResponseDto" nillable="true" type="tns:LoginResponseDto" />
+  <xs:complexType name="ServiceErrorResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceErrorResponseType" nillable="true" type="tns:ServiceErrorResponseType" />
+  <xs:complexType name="DatosEstaticosResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VistoEventos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VistoNotificaciones" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VistoPagos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VistoPaquetes" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosEstaticosResponseDto" nillable="true" type="tns:DatosEstaticosResponseDto" />
+  <xs:complexType name="HomeResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CampaniaActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampaniasDebe" type="xs:int" />
+      <xs:element minOccurs="0" name="DeudaActual" type="xs:decimal" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCampanias" nillable="true" type="q4:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaDepasEstado" nillable="true" type="q5:ArrayOfDepasEstadoHomeListaDto" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaGastosMensual" nillable="true" type="q6:ArrayOfReporteGastosMensualEdificioResumido" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaReporteEstadoCuentaResumido" nillable="true" type="q7:ArrayOfReporteEstadoCuentaMensualResumidoListaDto" />
+      <xs:element minOccurs="0" name="TextoAlDia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoMostrarRetraso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneRetraso" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HomeResponseDto" nillable="true" type="tns:HomeResponseDto" />
+  <xs:complexType name="EstadoCuentaResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiasRetraso" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCampanias" nillable="true" type="q8:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaDetalleEstadoCuenta" nillable="true" type="q9:ArrayOfDetalleEstadoCuentaListaDto" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaPagosEstadoCuenta" nillable="true" type="q10:ArrayOfPagosPorEstadoCuentaListaDto" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="MontosEstadoCuenta" nillable="true" type="q11:MontosEstadoCuentaListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoCuentaResponseDto" nillable="true" type="tns:EstadoCuentaResponseDto" />
+  <xs:complexType name="PagoResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="Adjunto1" nillable="true" type="q12:ArchivoListaDto" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="Adjunto2" nillable="true" type="q13:ArchivoListaDto" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="Adjunto3" nillable="true" type="q14:ArchivoListaDto" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCampanias" nillable="true" type="q15:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCuentasBancarias" nillable="true" type="q16:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaEstados" nillable="true" type="q17:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaPagos" nillable="true" type="q18:ArrayOfPagoListaDto" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Pago" nillable="true" type="q19:Pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagoResponseDto" nillable="true" type="tns:PagoResponseDto" />
+  <xs:complexType name="ArchivoResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="Archivo" nillable="true" type="q20:ArchivoListaDto" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaArchivos" nillable="true" type="q21:ArrayOfArchivoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArchivoResponseDto" nillable="true" type="tns:ArchivoResponseDto" />
+  <xs:complexType name="PerfilResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaOpciones" nillable="true" type="q22:ArrayOfOpcionesPorPerfilListaDto" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaOpcionesMenu" nillable="true" type="q23:ArrayOfOpcionListaDto" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaPerfiles" nillable="true" type="q24:ArrayOfPerfilListaDto" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Perfil" nillable="true" type="q25:Perfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfilResponseDto" nillable="true" type="tns:PerfilResponseDto" />
+  <xs:complexType name="CampaniaResponseDto">
+    <xs:sequence>
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes" minOccurs="0" name="Campania" nillable="true" type="q26:Campania" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCampanias" nillable="true" type="q27:ArrayOfCampaniaListaDto" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaCampaniasPlantilla" nillable="true" type="q28:ArrayOfGenericoListaDto" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaConceptos" nillable="true" type="q29:ArrayOfConceptoListaDto" />
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MiDepa.pe.DataTypes.Listas" minOccurs="0" name="ListaMeses" nillable="true" type="q30:ArrayOfGenericoListaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaniaResponseDto" nillable="true" type="tns:CampaniaResponseDto" />
+</xs:schema>

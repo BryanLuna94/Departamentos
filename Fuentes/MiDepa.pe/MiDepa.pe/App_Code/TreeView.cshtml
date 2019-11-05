@@ -1,0 +1,38 @@
+﻿@using System.Collections.Generic;
+@using MiDepa.pe.ServicioMiDepa;
+@using System.Web.Mvc;
+@using MiDepa.pe.Helper;
+
+
+@*@helper GetTreeView(List<OpcionesPorPerfilListaDto> opciones, int idPadre, List<OpcionesPorPerfilListaDto> opcionesTotales, string onclick = "")
+    {
+        var data = opciones.Where(x => x.CodigoPadre == idPadre).ToList();
+        foreach (var i in data)
+        {
+            <li>
+                @{
+                    var submenu = HelperFunciones.ListaOpcionesPorPadre(opcionesTotales, i.CodigoOpcion);
+                    var checkeado = (i.Existe) ? "checked" : "";
+                    var eventoOnClick = (onclick != "") ? onclick + "(" + i.CodigoOpcion + ")" : "";
+                }
+                @if (submenu.Count > 0)
+                {
+                    <span class="collapseJBLV collapsibleJBLV">&nbsp;</span>
+                }
+                else
+                {
+                    <span style="width:15px; display:inline-block">&nbsp;</span>
+                }
+                <span>
+                    <input type="checkbox" onclick="@eventoOnClick" class="treepss2" name="check" id="@i.CodigoOpcion" @checkeado value="@i.CodigoPadre">
+                    <label for="@i.CodigoOpcion">@i.Nombre</label>
+                </span>
+                @if (submenu.Count > 0)
+                {
+                    <ul>
+                        @TreeView.GetTreeView(submenu, i.CodigoOpcion, opcionesTotales)
+                    </ul>
+                }
+            </li>
+        }
+}*@

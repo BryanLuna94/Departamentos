@@ -1,0 +1,24 @@
+﻿@model MiDepa.pe.Models.Pagos.PagoGridViewModel
+
+<div class="col-sm-12">
+    <form id="pagoGridForm" action="/" class="form-horizontal" autocomplete="off">
+        <div class="panel panel-default">
+            @{ Html.RenderPartial("_Index.Head", Model); }
+        </div>
+    </form>
+</div>
+
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Lista de Pagos
+        </div>
+        @{ Html.RenderPartial("_Index.Grid", Model); }
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        pago.grid.load();
+    });
+</script>

@@ -1,0 +1,44 @@
+﻿@using MiDepa.pe.Helper
+@model MiDepa.pe.Models.Campania.CampaniaGridViewModel
+
+@{
+    var per = HelperFunciones.ValidaTienePermiso(HelperConstantes.Permisos.PUEDE_CREAREDITAR_CAMPANIA).ToString();
+}
+
+<div class="panel-wrapper collapse in" id="campania-wrapper">
+    <div class="panel-body table-responsive">
+        <table class="table color-table inverse-table table-striped" id="tblLista">
+            <thead>
+                <tr class="row-head">
+                    <th width="20%">CÓDIGO</th>
+                    <th width="30%">F. INICIO</th>
+                    <th width="30%">F. FIN</th>
+                    <th width="10%">TOTAL</th>
+                    <th width="10%">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tbodylst">
+                @foreach (var item in Model.ListaCampanias)
+                {
+                    <tr role="row">
+                        <td align="center">
+                            <a href="#" onclick="campania.editor.init(@item.CampaniaId, '@per')">@item.Codigo</a>
+                        </td>
+                        <td align="center">@item.FechaInicio</td>
+                        <td align="center">@item.FechaFin</td>
+                        <td align="right">@item.Total</td>
+                        <td class="text-nowrap" align="center">
+                            @HelperHTML.CrearLinkSiTienePermiso(HelperConstantes.Permisos.PUEDE_ELIMINAR_CAMPANIA, "campania.grid.eliminar", item.Codigo.ToString(), "Eliminar", "btn btn-info btn-outline btn-circle btn-sm m-r-5", "ti-trash")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        campania.grid.paginarParcial();
+    });
+</script>

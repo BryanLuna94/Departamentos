@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0BD4ECE-D29A-40D4-8D6F-533A5EDECA7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiDepa.pe.DataTypes</RootNamespace>
+    <AssemblyName>MiDepa.pe.DataTypes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivo.cs" />
+    <Compile Include="Campania.cs" />
+    <Compile Include="CampaniaDetalle.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Cliente_Contacto.cs" />
+    <Compile Include="Cliente_Contrato.cs" />
+    <Compile Include="Comentario.cs" />
+    <Compile Include="Contrato_Mensualidad.cs" />
+    <Compile Include="Departamento.cs" />
+    <Compile Include="Departamento_EstadoCuenta.cs" />
+    <Compile Include="Departamento_Paquete.cs" />
+    <Compile Include="Departamento_Visita.cs" />
+    <Compile Include="Documento.cs" />
+    <Compile Include="Documento_Detalle.cs" />
+    <Compile Include="Edificio.cs" />
+    <Compile Include="Edificio_Configuracion.cs" />
+    <Compile Include="Edificio_CuentaBancaria.cs" />
+    <Compile Include="Edificio_EspacioComun.cs" />
+    <Compile Include="EstadoCuenta_Detalle.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="Filtros\CampaniaFiltroDto.cs" />
+    <Compile Include="Filtros\DepasEstadoHomeFiltroDto.cs" />
+    <Compile Include="Filtros\PagoFiltroDto.cs" />
+    <Compile Include="JuntaDirectiva.cs" />
+    <Compile Include="Listas\ArchivoListaDto.cs" />
+    <Compile Include="Listas\CampaniaListaDto.cs" />
+    <Compile Include="Listas\ConceptoListaDto.cs" />
+    <Compile Include="Listas\DatosUsuarioListaDto.cs" />
+    <Compile Include="Listas\DepasEstadoHomeListaDto.cs" />
+    <Compile Include="Listas\DetalleEstadoCuentaListaDto.cs" />
+    <Compile Include="Listas\GenericoListaDto.cs" />
+    <Compile Include="Listas\LoginListaDto.cs" />
+    <Compile Include="Listas\MontosEstadoCuentaListaDto.cs" />
+    <Compile Include="Listas\OpcionesPorPerfilListaDto.cs" />
+    <Compile Include="Listas\OpcionListaDto.cs" />
+    <Compile Include="Listas\PagoListaDto.cs" />
+    <Compile Include="Listas\PagosPorEstadoCuentaListaDto.cs" />
+    <Compile Include="Listas\PerfilListaDto.cs" />
+    <Compile Include="Listas\ReporteEstadoCuentaMensualResumidoListaDto.cs" />
+    <Compile Include="Listas\ReporteGastosMensualEdificioResumido.cs" />
+    <Compile Include="Listas\ReporteGastosMensualEdificio.cs" />
+    <Compile Include="Notificacion.cs" />
+    <Compile Include="Opcion.cs" />
+    <Compile Include="Pago.cs" />
+    <Compile Include="Parametro.cs" />
+    <Compile Include="Perfil.cs" />
+    <Compile Include="Perfil_Opcion.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\ArchivoRequestDto.cs" />
+    <Compile Include="Request\CampaniaRequestDto.cs" />
+    <Compile Include="Request\HomeRequestDto.cs" />
+    <Compile Include="Request\LoginRequestDto.cs" />
+    <Compile Include="Request\PagoRequestDto.cs" />
+    <Compile Include="Request\UsuarioRequestDto.cs" />
+    <Compile Include="Reserva.cs" />
+    <Compile Include="Response\ArchivosResponseDto.cs" />
+    <Compile Include="Response\CampaniaResponseDto.cs" />
+    <Compile Include="Response\DatosEstaticosResponseDto.cs" />
+    <Compile Include="Response\EstadoCuentaResponseDto.cs" />
+    <Compile Include="Response\HomeResponseDto.cs" />
+    <Compile Include="Response\LoginResponseDto.cs" />
+    <Compile Include="Response\PagoResponseDto.cs" />
+    <Compile Include="Response\PerfilResponseDto.cs" />
+    <Compile Include="Response\ServiceErrorResponseType.cs" />
+    <Compile Include="Response\UsuarioResponseDto.cs" />
+    <Compile Include="Tabla.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Visto.cs" />
+    <Compile Include="Votacion.cs" />
+    <Compile Include="Votacion_Elemento.cs" />
+    <Compile Include="Votacion_Usuario.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,156 @@
+﻿@import "site.definicion.less";
+
+.skin-blue .main-header .navbar {
+    background-color: @dark-background-color1;
+    .nav > li > a {
+        color: @light-color-letter1;
+    }
+
+    .nav > li > a:hover,
+    .nav > li > a:active,
+    .nav > li > a:focus,
+    .nav .open > a,
+    .nav .open > a:hover,
+    .nav .open > a:focus,
+    .nav > .active > a {
+        background: rgba(0, 0, 0, 0.1);
+        color: @light-color-letter2;
+    }
+
+    .sidebar-toggle {
+        color: @light-color-letter1;
+    }
+    .sidebar-toggle:hover {
+        color: @light-color-letter2;
+        background-color: @dark-background-color3;
+    }
+}
+
+@media (max-width: 767px) {
+    .skin-blue .main-header .navbar .dropdown-menu li.divider {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .skin-blue .main-header .navbar .dropdown-menu li a {
+        color: @light-color-letter1;
+    }
+
+    .skin-blue .main-header .navbar .dropdown-menu li a:hover {
+        background: @dark-background-color3;
+    }
+}
+
+.skin-blue .main-header .logo {
+    background-color: @dark-background-color3;
+    color: @light-color-letter1;
+    border-bottom: 0 solid transparent;
+}
+
+.skin-blue .main-header .logo:hover {
+    background-color: @dark-background-color4;
+}
+
+.skin-blue .main-header li.user-header {
+    background-color: @dark-background-color1;
+}
+
+.skin-blue .content-header {
+    background: transparent;
+}
+
+.skin-blue .wrapper,
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+    background-color: @sidebar-background-color3;
+}
+
+.skin-blue .user-panel > .info,
+.skin-blue .user-panel > .info > a {
+    color: @light-color-letter1;
+}
+
+.skin-blue .sidebar-menu > li.header {
+    color: @sidebar-color-letter-for5;
+    background: @sidebar-background-color5;
+}
+
+.skin-blue .sidebar-menu > li > a {
+    border-left: 3px solid transparent;
+}
+
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.active > a {
+    color: @light-color-letter1;
+    background: @sidebar-background-color4;
+    border-left-color: @dark-background-color1;
+}
+
+.skin-blue .sidebar-menu > li > .treeview-menu {
+    margin: 0 1px;
+    background: @sidebar-background-color2;
+}
+
+.skin-blue .sidebar a {
+    color: @sidebar-color-letter4;
+}
+
+.skin-blue .sidebar a:hover {
+    text-decoration: none;
+}
+
+.skin-blue .treeview-menu > li > a {
+    color: @sidebar-color-letter3;
+}
+
+.skin-blue .treeview-menu > li.active > a,
+.skin-blue .treeview-menu > li > a:hover {
+    color: @light-color-letter1;
+}
+
+.skin-blue .sidebar-form {
+    border-radius: 3px;
+    border: 1px solid @sidebar-background-color1;
+    margin: 10px 10px;
+}
+
+.skin-blue .sidebar-form input[type="text"],
+.skin-blue .sidebar-form .btn {
+    box-shadow: none;
+    background-color: @sidebar-background-color1;
+    border: 1px solid transparent;
+    height: 35px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.skin-blue .sidebar-form input[type="text"] {
+    color: @sidebar-color-letter2;
+    border-radius: 2px 0 0 2px;
+}
+
+.skin-blue .sidebar-form input[type="text"]:focus,
+.skin-blue .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+    background-color: @light-color-letter1;
+    color: @sidebar-color-letter1;
+}
+
+.skin-blue .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+    border-left-color: @light-color-letter1;
+}
+
+.skin-blue .sidebar-form .btn {
+    color: @sidebar-color-letter2;
+    border-radius: 0 2px 2px 0;
+}
+
+.skin-blue.layout-top-nav .main-header > .logo {
+    background-color: @dark-background-color1;
+    color: @light-color-letter1;
+    border-bottom: 0 solid transparent;
+}
+
+.skin-blue.layout-top-nav .main-header > .logo:hover {
+    background-color: @dark-background-color2;
+}

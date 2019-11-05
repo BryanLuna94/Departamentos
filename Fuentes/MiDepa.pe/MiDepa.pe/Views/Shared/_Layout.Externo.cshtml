@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>JELAF - @ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/ionicons.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker.standalone.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/lib/css/jquery-ui-1.11.4/jquery-ui.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.base.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.temp.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.skin.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/layout.main.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/control.campo.css" />
+
+    <script src="~/wwwroot/lib/js/jquery.min.js"></script>
+    <script src="~/wwwroot/lib/js/jquery-ui.min.js"></script>
+    <script src="~/wwwroot/lib/js/jquery.geocomplete.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap.min.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-dialog.min.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-filestyle.min.js"></script>
+    <script src="~/wwwroot/lib/js/formValidation.js"></script>
+    <script src="~/wwwroot/lib/js/Framework.bootstrap.js"></script>
+    <script src="~/wwwroot/lib/js/i18n.js"></script>
+    <script src="~/wwwroot/lib/js/mandatoryIcon.js"></script>
+    <script src="~/wwwroot/lib/js/es_ES.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/wwwroot/lib/js/bootstrap-datepicker.es.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
+
+    <script src="~/wwwroot/lib/js/jquery.slimscroll.min.js"></script>
+    <script src="~/wwwroot/js/plugins/app.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.jquery.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.themes.default.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.mensaje.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.bottom.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.bottomCenter.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.center.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.inline.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.top.js"></script>
+    <script src="~/wwwroot/js/plugins/noty.layout.topCenter.js"></script>
+    <script src="~/wwwroot/js/plugins/input-mask/jquery.inputmask.bundle.js"></script>
+
+    <script src="~/wwwroot/js/helper/baseEditor.js"></script>
+    <script src="~/wwwroot/js/helper/baseGrid.js"></script>
+    <script src="~/wwwroot/js/helper/helperAjax.js"></script>
+    <script src="~/wwwroot/js/helper/helperConstantes.js"></script>
+    <script src="~/wwwroot/js/helper/helperFunctions.js"></script>
+    <script src="~/wwwroot/js/helper/helperGrid.js"></script>
+    <script src="~/wwwroot/js/helper/helperNotificacion.js"></script>
+    <script src="~/wwwroot/js/helper/helperSite.js"></script>
+    <script src="~/wwwroot/js/helper/general.js"></script>
+
+    <script src="~/wwwroot/js/view/login.js"></script>
+    <script src="~/wwwroot/js/view/empresario.js"></script>
+    <script src="~/wwwroot/js/view/datosEmpresario.js"></script>
+    
+
+</head>
+<body class="login-body">
+    <div id="id-layout-processing">
+        <img src="~/wwwroot/Images/processing.gif" />
+    </div>
+    <header id="login-header">
+        <div class="container">
+            <div class="row">
+                <div class="row-height">
+                    @*<div id="logo" class="col-xs-12 col-xs-height col-middle">
+                        <img class="img-responsive" src="~/wwwroot/Images/logo.png" alt="Provias-Nacional">
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </header>
+    <div role="main" id="login-main">
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <footer class="login-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <address>
+						<div class="pull-right hidden-xs">
+
+						</div>
+						<strong>Copyright &copy; 2018 </strong>&nbsp;&nbsp;&nbsp;&nbsp;JELAF INTEGRADORES S.R.L. - Todos los derechos reservados.
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("scripts", false)
+</body>
+</html>

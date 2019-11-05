@@ -1,0 +1,24 @@
+﻿@model MiDepa.pe.Models.Campania.CampaniaGridViewModel
+
+<div class="col-sm-12">
+    <form id="campaniaGridForm" action="/" class="form-horizontal" autocomplete="off">
+        <div class="panel panel-default">
+            @{ Html.RenderPartial("_Index.Head", Model); }
+        </div>
+    </form>
+</div>
+
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Lista de Campanias
+        </div>
+        @{ Html.RenderPartial("_Index.Grid", Model); }
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        campania.grid.load();
+    });
+</script>
